@@ -66,3 +66,5 @@ stock-zlib = []
 asm = []
 # Enable this feature if you want to have a statically linked libz
 static = []
+# Link zlib elsewhere
+unresolved = []

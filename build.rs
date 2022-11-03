@@ -4,6 +4,10 @@ use std::path::PathBuf;
 use std::process::Command;
 
 fn main() {
+    if cfg!(feature = "unresolved") {
+        return;
+    }
+
     println!("cargo:rerun-if-env-changed=LIBZ_SYS_STATIC");
     println!("cargo:rerun-if-changed=build.rs");
     let host = env::var("HOST").unwrap();
